@@ -183,10 +183,11 @@ def render_methodology_tab():
          "available carts, beverage inventory mix, hourly capacity, average ticket size, operating "
          "windows, depot location, and the 2-4 candidate intra-zone micro-spots in each zone -- from "
          "internal JSON files (data/carts.json, data/zone_spots.json) instead of LLM training-data memory."),
-        ("(5) Foot-Traffic Map", "render_placement_map_html (Google Maps JavaScript API)",
+        ("(5) Foot-Traffic Map", "render_placement_map_html (Google Maps JavaScript API + deck.gl)",
          "The agent synthesizes regression output and event locations into a spatial heat-map showing "
          "predicted pedestrian density across the 14-zone city grid for the event day. "
-         "Heat layer + zone-centroid markers + cart pins, embedded as live Google Maps JS."),
+         "Zone-centroid markers + cart pins on a live Google Maps base, with the foot-traffic heat layer "
+         "rendered by deck.gl's GoogleMapsOverlay (the supported successor to Google's deprecated HeatmapLayer)."),
         ("(6) Non-Linear Optimizer", "optimize_cart_placement tool (Python brute-force NLP)",
          "Two-stage optimizer ingests the foot-traffic predictions and cart constraints "
          "(max_carts_per_zone, capacities, ticket sizes) and applies non-linear programming "
@@ -232,8 +233,8 @@ def render_methodology_tab():
          "Step 7 sanity-check. Drive time depot -> spot."),
         ("Places", "Google Places API (New)",
          "Step 7 sanity-check. Nearby cafe / coffee / bar count for competition density."),
-        ("Map embed", "Google Maps JavaScript API",
-         "Step 5. Heat layer + cart pins + zone centroids in the UI."),
+        ("Map embed", "Google Maps JavaScript API + deck.gl",
+         "Step 5. Cart pins + zone centroids on a Google Maps base; foot-traffic heat layer via deck.gl GoogleMapsOverlay."),
         ("Weather", "Open-Meteo (free)",
          "Step 2 + 3. Daily forecast + historical archive used for training."),
         ("RAG store", "data/carts.json + data/zone_spots.json",

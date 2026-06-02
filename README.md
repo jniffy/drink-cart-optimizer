@@ -98,7 +98,7 @@ mvp/
 │   ├── traffic.py            Wraps model.predict_all_zones, caches results for the optimizer
 │   ├── placement.py          Wraps optimizer.optimize, falls back to cached predictions
 │   ├── spots.py              Picks best intra-zone micro-spot based on event affinity
-│   └── mapping.py            Generates the Google Maps JavaScript embed HTML
+│   └── mapping.py            Generates the Google Maps JS embed HTML (cart pins + zone dots; heat layer via deck.gl GoogleMapsOverlay)
 │
 ├── data/
 │   ├── seattle_zones.json    14 placement zones + major venues (Lumen Field, Pike Place, etc.)
