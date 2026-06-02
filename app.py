@@ -450,8 +450,17 @@ if not _is_valid_plan(plan):
 
 
 if _is_valid_plan(plan):
-    from tools.weather import LAST as WEATHER_CACHE
+    from tools.weather import LAST as WEATHER_CACHE, get_weather_forecast
     weather = WEATHER_CACHE.get("forecast") or {}
+    # The Weather KPI must always reflect the target date, even when the agent
+    # didn't call the weather tool (or cached a different date). Open-Meteo needs
+    # no API key, so fetch directly as a fallback. get_weather_forecast already
+    # falls back to seasonal averages internally if the request fails.
+    if not weather or weather.get("date") != target_date.isoformat():
+        try:
+            weather = get_weather_forecast(target_date.isoformat())
+        except Exception:
+            weather = weather or {}
 
     total_rev = plan["total_projected_revenue_usd"]
     n_placed = plan["n_carts_placed"]
