@@ -4,6 +4,8 @@
 
 An LLM-powered agent that decides where to deploy mobile drink carts in Seattle on any given day to maximize revenue. The agent searches the live web for events, predicts pedestrian foot traffic per neighborhood, runs a constrained non-linear optimizer over the cart fleet, and renders the plan on an interactive Google Map.
 
+📐 **See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for a diagram of the full 7-step agent loop.**
+
 ---
 
 ## 1. Quick start

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="972" viewBox="0 0 980 972" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 z" fill="#475569"/></marker>
+<marker id="loop" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 z" fill="#7c3aed"/></marker>
+</defs>
+<rect x="0" y="0" width="980" height="972" fill="#ffffff"/>
+<text x="490.0" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a" text-anchor="middle">Agentic Drink Cart Placement Optimizer</text>
+<text x="490.0" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748b" text-anchor="middle">System architecture: a 7-step autonomous agent loop</text>
+<rect x="35.0" y="92" width="290" height="52" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<text x="180.0" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">Target date</text>
+<text x="180.0" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#64748b" text-anchor="middle">+ how many carts</text>
+<rect x="345.0" y="92" width="290" height="52" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<text x="490.0" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">OpenAI API key</text>
+<text x="490.0" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#64748b" text-anchor="middle">Responses + web search</text>
+<rect x="655.0" y="92" width="290" height="52" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<text x="800.0" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">Google Maps key</text>
+<text x="800.0" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#64748b" text-anchor="middle">geocode / places / routes / map</text>
+<text x="35.0" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="start">USER INPUT  (sidebar)</text>
+<rect x="60" y="168" width="860" height="60" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="490.0" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#5b21b6" text-anchor="middle">AGENTIC LOOP  --  OpenAI Responses API  (gpt-4o-mini)</text>
+<text x="490.0" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#6d28d9" text-anchor="middle">autonomously selects which tools to call, iterates when data is incomplete, and self-corrects via a runtime validator</text>
+<line x1="490.0" y1="144" x2="490.0" y2="168" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="260" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="295.0" r="17" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="120" y="300.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">1</text>
+<text x="150" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Web Search</text>
+<text x="150" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Search the live web for events on the target date</text>
+<rect x="600" y="273" width="300" height="44" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="750.0" y="300.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle">OpenAI web_search_preview</text>
+<line x1="560" y1="295.0" x2="600" y2="295.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="356" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="391.0" r="17" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="120" y="396.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="middle">2</text>
+<text x="150" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Extract &amp; Parse</text>
+<text x="150" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Geocode venues, fetch weather, tag event types</text>
+<rect x="600" y="369" width="300" height="44" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="750.0" y="396.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">Google Geocoding API  +  Open-Meteo</text>
+<line x1="560" y1="391.0" x2="600" y2="391.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="452" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="487.0" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="120" y="492.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="middle">3</text>
+<text x="150" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Foot-Traffic Model</text>
+<text x="150" y="504" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Predict pedestrian volume for each of 14 zones</text>
+<rect x="600" y="465" width="300" height="44" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="750.0" y="492.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#16a34a" text-anchor="middle">sklearn LinearRegression</text>
+<line x1="560" y1="487.0" x2="600" y2="487.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="548" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="583.0" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="120" y="588.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="middle">4</text>
+<text x="150" y="578" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">RAG  --  Internal Data</text>
+<text x="150" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Retrieve cart fleet, inventory, micro-spots</text>
+<rect x="600" y="561" width="300" height="44" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="750.0" y="588.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#16a34a" text-anchor="middle">carts.json  +  zone_spots.json</text>
+<line x1="560" y1="583.0" x2="600" y2="583.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="644" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="679.0" r="17" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="120" y="684.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="middle">5</text>
+<text x="150" y="674" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Foot-Traffic Map</text>
+<text x="150" y="696" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Render the predicted-density heat-map</text>
+<rect x="600" y="657" width="300" height="44" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="750.0" y="684.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">Google Maps JS  +  deck.gl</text>
+<line x1="560" y1="679.0" x2="600" y2="679.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="740" width="470" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="775.0" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="120" y="780.0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="middle">6</text>
+<text x="150" y="770" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Non-Linear Optimizer</text>
+<text x="150" y="792" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#475569" text-anchor="start">Maximize revenue (cannibalization-aware)</text>
+<rect x="600" y="753" width="300" height="44" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="750.0" y="780.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#16a34a" text-anchor="middle">custom Python brute-force NLP</text>
+<line x1="560" y1="775.0" x2="600" y2="775.0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="330" x2="325.0" y2="356" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="426" x2="325.0" y2="452" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="522" x2="325.0" y2="548" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="618" x2="325.0" y2="644" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="714" x2="325.0" y2="740" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="325.0" y1="228" x2="325.0" y2="260" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="90" y="842" width="800" height="76" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<circle cx="124" cy="880" r="18" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="124" y="885" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ea580c" text-anchor="middle">7</text>
+<text x="156" y="874" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#9a3412" text-anchor="start">Placement Plan  --  Streamlit UI</text>
+<text x="156" y="896" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#9a3412" text-anchor="start">KPI band   .   placement table   .   interactive map   .   per-cart reasoning</text>
+<line x1="325.0" y1="810" x2="325.0" y2="842" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 90 880 L 40 880 L 40 198 L 60 198" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#loop)"/>
+<text x="34" y="505.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#7c3aed" text-anchor="middle" transform="rotate(-90 34 505.0)">agent re-runs the loop / validator forces a retry</text>
+<text x="90" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b" text-anchor="start">Legend:</text>
+<rect x="154" y="930" width="16" height="16" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="176" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="start">LLM / orchestration</text>
+<rect x="341" y="930" width="16" height="16" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="363" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="start">Google APIs</text>
+<rect x="472" y="930" width="16" height="16" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="494" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="start">Data / ML / Python</text>
+<rect x="652" y="930" width="16" height="16" rx="4" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+<text x="674" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="start">User input</text>
+<rect x="776" y="930" width="16" height="16" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+<text x="798" y="942" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="start">Deliverable</text>
+</svg>
