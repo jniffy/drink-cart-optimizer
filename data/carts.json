@@ -1,0 +1,64 @@
+{
+  "operator": "Emerald City Carts (demo fleet)",
+  "carts": [
+    {
+      "id": "EC-01", "name": "Cart 1", "drink_mix": "balanced",
+      "capacity_per_hour": 110, "avg_ticket_usd": 6.25,
+      "needs_power": false, "max_hours": 10, "operating_window": ["08:00", "20:00"],
+      "inventory": {"hot_coffee": 320, "iced_coffee": 280, "cold_brew": 220, "bottled_water": 180, "energy_drink": 100},
+      "staff": [{"name": "A. Lin", "shift": ["08:00", "14:30"]}, {"name": "M. Patel", "shift": ["14:30", "20:00"]}],
+      "notes": "Most versatile cart. Good for all-day deployments."
+    },
+    {
+      "id": "EC-02", "name": "Cart 2", "drink_mix": "cold_only",
+      "capacity_per_hour": 95, "avg_ticket_usd": 7.10,
+      "needs_power": false, "max_hours": 9, "operating_window": ["09:00", "22:00"],
+      "inventory": {"cold_brew": 380, "iced_latte": 220, "lemonade": 180, "kombucha": 90, "bottled_water": 150},
+      "staff": [{"name": "J. Tran", "shift": ["09:00", "16:00"]}, {"name": "R. Kim", "shift": ["16:00", "22:00"]}],
+      "notes": "Specialty cold brew + canned drinks. Best in warm weather."
+    },
+    {
+      "id": "EC-03", "name": "Cart 3", "drink_mix": "stadium",
+      "capacity_per_hour": 140, "avg_ticket_usd": 8.50,
+      "needs_power": true, "max_hours": 8, "operating_window": ["10:00", "23:00"],
+      "inventory": {"draft_beer": 480, "soda": 360, "bottled_water": 220, "iced_coffee": 120},
+      "staff": [{"name": "T. Brooks", "shift": ["10:00", "16:00"]}, {"name": "S. Reyes", "shift": ["16:00", "23:00"]}, {"name": "D. Park", "shift": ["16:00", "23:00"]}],
+      "notes": "High-throughput stadium cart. Requires permitted power hookup. 3-person crew on game days."
+    },
+    {
+      "id": "EC-04", "name": "Cart 4", "drink_mix": "hot_only",
+      "capacity_per_hour": 80, "avg_ticket_usd": 5.50,
+      "needs_power": true, "max_hours": 8, "operating_window": ["06:30", "14:00"],
+      "inventory": {"espresso_drink": 360, "drip_coffee": 240, "hot_chocolate": 80, "tea": 60},
+      "staff": [{"name": "E. Wong", "shift": ["06:30", "14:00"]}],
+      "notes": "Espresso-focused. Best for cold mornings and commute hours."
+    },
+    {
+      "id": "EC-05", "name": "Cart 5", "drink_mix": "balanced",
+      "capacity_per_hour": 120, "avg_ticket_usd": 7.00,
+      "needs_power": false, "max_hours": 10, "operating_window": ["07:00", "21:00"],
+      "inventory": {"iced_coffee": 280, "hot_coffee": 240, "smoothie": 160, "bottled_water": 180, "snack_bar": 140},
+      "staff": [{"name": "C. Nguyen", "shift": ["07:00", "14:00"]}, {"name": "P. Davis", "shift": ["14:00", "21:00"]}],
+      "notes": "Workhorse cart, good campus or festival pick."
+    },
+    {
+      "id": "EC-06", "name": "Cart 6", "drink_mix": "balanced",
+      "capacity_per_hour": 100, "avg_ticket_usd": 6.75,
+      "needs_power": false, "max_hours": 9, "operating_window": ["09:00", "20:00"],
+      "inventory": {"iced_coffee": 240, "hot_coffee": 200, "lemonade": 160, "bottled_water": 140},
+      "staff": [{"name": "I. Hassan", "shift": ["09:00", "15:00"]}, {"name": "G. Cho", "shift": ["15:00", "20:00"]}],
+      "notes": "Compact cart. Easiest to permit in tight pedestrian zones."
+    }
+  ],
+  "constraints": {
+    "min_zone_separation_meters": 300,
+    "max_carts_per_zone": 2,
+    "rationale": "Avoid cannibalizing sales by clustering carts in the same micro-market."
+  },
+  "depot": {
+    "name": "Emerald City Carts HQ (Georgetown)",
+    "address": "5950 4th Ave S, Seattle, WA 98108",
+    "lat": 47.5476, "lng": -122.3286,
+    "notes": "Operator base of operations. All carts deploy from here in the morning."
+  }
+}

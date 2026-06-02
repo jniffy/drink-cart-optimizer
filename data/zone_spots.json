@@ -1,0 +1,71 @@
+{
+  "_doc": "For each placement zone, candidate intra-zone spots with precise coords. event_affinity is a multiplier (0-2.0) for how good this spot is when the zone's dominant event is the given type. Used by optimizer to refine cart coordinates beyond just the zone centroid.",
+  "downtown": [
+    {"name": "Pike Place Market - Main Arcade", "lat": 47.6094, "lng": -122.3416, "event_affinity": {"none": 1.6, "cruise": 2.0, "festival": 1.5, "convention": 1.2}},
+    {"name": "Westlake Park",                   "lat": 47.6112, "lng": -122.3368, "event_affinity": {"none": 1.3, "convention": 1.7, "festival": 1.4, "theater": 1.2}},
+    {"name": "Convention Center - Pine St entrance", "lat": 47.6116, "lng": -122.3331, "event_affinity": {"convention": 2.0, "none": 0.9}},
+    {"name": "Colman Dock / Pier 52 (ferry terminal)", "lat": 47.6028, "lng": -122.3380, "event_affinity": {"cruise": 1.8, "stadium": 1.3, "none": 1.1}}
+  ],
+  "seattle_center": [
+    {"name": "Climate Pledge Arena - SW Plaza",    "lat": 47.6221, "lng": -122.3540, "event_affinity": {"arena": 2.0, "none": 1.0}},
+    {"name": "Space Needle - Chihuly side",        "lat": 47.6205, "lng": -122.3482, "event_affinity": {"none": 1.5, "cruise": 1.4, "festival": 1.3}},
+    {"name": "International Fountain Lawn",        "lat": 47.6212, "lng": -122.3494, "event_affinity": {"festival": 2.0, "none": 1.2, "arena": 1.1}}
+  ],
+  "capitol_hill": [
+    {"name": "Cal Anderson Park - NW corner",      "lat": 47.6166, "lng": -122.3198, "event_affinity": {"festival": 2.0, "none": 1.4, "music_venue": 1.3}},
+    {"name": "Broadway & Pine (Light Rail)",       "lat": 47.6166, "lng": -122.3211, "event_affinity": {"none": 1.5, "music_venue": 1.6, "theater": 1.3}},
+    {"name": "Pike/Pine corridor - 11th Ave",      "lat": 47.6142, "lng": -122.3174, "event_affinity": {"music_venue": 1.8, "none": 1.2, "festival": 1.5}}
+  ],
+  "slu": [
+    {"name": "Lake Union Park",                    "lat": 47.6266, "lng": -122.3372, "event_affinity": {"festival": 1.8, "none": 1.4, "cruise": 1.2}},
+    {"name": "Amazon Spheres",                     "lat": 47.6155, "lng": -122.3393, "event_affinity": {"none": 1.5, "convention": 1.3}},
+    {"name": "South Lake Union Streetcar - Westlake/Mercer", "lat": 47.6234, "lng": -122.3373, "event_affinity": {"none": 1.2, "convention": 1.4}}
+  ],
+  "belltown": [
+    {"name": "Pier 66 (cruise terminal)",          "lat": 47.6125, "lng": -122.3460, "event_affinity": {"cruise": 2.0, "none": 1.0}},
+    {"name": "Olympic Sculpture Park",             "lat": 47.6166, "lng": -122.3553, "event_affinity": {"festival": 1.6, "none": 1.4, "cruise": 1.3}},
+    {"name": "Bell St & 1st Ave",                  "lat": 47.6131, "lng": -122.3447, "event_affinity": {"none": 1.3, "music_venue": 1.4}}
+  ],
+  "pioneer_square": [
+    {"name": "Occidental Square",                  "lat": 47.6004, "lng": -122.3334, "event_affinity": {"festival": 2.0, "stadium": 1.8, "world_cup": 2.0, "none": 1.3}},
+    {"name": "Pioneer Square Station",             "lat": 47.6027, "lng": -122.3326, "event_affinity": {"none": 1.4, "stadium": 1.6, "world_cup": 1.7}},
+    {"name": "Smith Tower / Yesler Way",           "lat": 47.6020, "lng": -122.3315, "event_affinity": {"none": 1.2, "convention": 1.2}}
+  ],
+  "sodo": [
+    {"name": "T-Mobile Park - Home Plate Gate",    "lat": 47.5919, "lng": -122.3324, "event_affinity": {"stadium": 2.0, "none": 0.7}},
+    {"name": "Lumen Field - North Plaza",          "lat": 47.5961, "lng": -122.3320, "event_affinity": {"world_cup": 2.0, "stadium": 1.9, "none": 0.7}},
+    {"name": "WaMu Theater entrance",              "lat": 47.5949, "lng": -122.3332, "event_affinity": {"theater": 1.8, "music_venue": 1.7, "none": 0.8}},
+    {"name": "SODO Light Rail Station",            "lat": 47.5816, "lng": -122.3273, "event_affinity": {"stadium": 1.5, "world_cup": 1.6, "none": 1.0}}
+  ],
+  "u_district": [
+    {"name": "Husky Stadium - Gate 1",             "lat": 47.6504, "lng": -122.3018, "event_affinity": {"stadium": 2.0, "arena": 1.6, "none": 0.6}},
+    {"name": "U District Light Rail Station",      "lat": 47.6604, "lng": -122.3132, "event_affinity": {"none": 1.7, "stadium": 1.4}},
+    {"name": "The Ave (University Way & 45th)",    "lat": 47.6608, "lng": -122.3134, "event_affinity": {"none": 1.5, "festival": 1.6}}
+  ],
+  "ballard": [
+    {"name": "Ballard Avenue Historic District",   "lat": 47.6675, "lng": -122.3835, "event_affinity": {"festival": 2.0, "none": 1.5, "music_venue": 1.4}},
+    {"name": "Ballard Commons Park",               "lat": 47.6681, "lng": -122.3842, "event_affinity": {"festival": 1.8, "none": 1.4}},
+    {"name": "Hiram M. Chittenden Locks",          "lat": 47.6657, "lng": -122.3974, "event_affinity": {"none": 1.5, "cruise": 1.2}}
+  ],
+  "fremont": [
+    {"name": "Fremont Bridge - N approach",        "lat": 47.6473, "lng": -122.3494, "event_affinity": {"none": 1.4, "festival": 1.5}},
+    {"name": "Fremont Sunday Market",              "lat": 47.6516, "lng": -122.3504, "event_affinity": {"festival": 2.0, "none": 1.6}},
+    {"name": "Fremont Troll",                      "lat": 47.6510, "lng": -122.3473, "event_affinity": {"none": 1.3, "festival": 1.4}}
+  ],
+  "queen_anne": [
+    {"name": "Kerry Park",                         "lat": 47.6294, "lng": -122.3596, "event_affinity": {"none": 1.5, "cruise": 1.2}},
+    {"name": "Queen Anne Ave & Boston St",         "lat": 47.6376, "lng": -122.3565, "event_affinity": {"none": 1.4, "festival": 1.3}}
+  ],
+  "wallingford": [
+    {"name": "Wallingford Center (45th & Wallingford Ave)", "lat": 47.6612, "lng": -122.3346, "event_affinity": {"festival": 1.7, "none": 1.4}},
+    {"name": "Gas Works Park",                              "lat": 47.6456, "lng": -122.3344, "event_affinity": {"festival": 2.0, "none": 1.5}}
+  ],
+  "columbia_city": [
+    {"name": "Columbia City Light Rail",                    "lat": 47.5601, "lng": -122.2925, "event_affinity": {"none": 1.4, "festival": 1.6}},
+    {"name": "Rainier Ave & S Edmunds St",                  "lat": 47.5594, "lng": -122.2917, "event_affinity": {"none": 1.3, "festival": 1.5}}
+  ],
+  "west_seattle": [
+    {"name": "California Ave & Alaska St (West Seattle Junction)", "lat": 47.5612, "lng": -122.3859, "event_affinity": {"none": 1.5, "festival": 1.7}},
+    {"name": "Alki Beach - 60th Ave SW",                    "lat": 47.5755, "lng": -122.4078, "event_affinity": {"none": 1.6, "festival": 1.8, "cruise": 1.2}}
+  ]
+}

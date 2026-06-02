@@ -1,0 +1,35 @@
+{
+  "city": "Seattle, WA",
+  "zones": [
+    {"id": "downtown",        "name": "Downtown / Pike Place",   "lat": 47.6097, "lng": -122.3422, "base_foot_traffic": 7800, "permit_difficulty": 3},
+    {"id": "seattle_center",  "name": "Seattle Center",          "lat": 47.6205, "lng": -122.3493, "base_foot_traffic": 5400, "permit_difficulty": 2},
+    {"id": "capitol_hill",    "name": "Capitol Hill",            "lat": 47.6253, "lng": -122.3222, "base_foot_traffic": 4900, "permit_difficulty": 1},
+    {"id": "slu",             "name": "South Lake Union",        "lat": 47.6253, "lng": -122.3370, "base_foot_traffic": 4100, "permit_difficulty": 2},
+    {"id": "belltown",        "name": "Belltown",                "lat": 47.6149, "lng": -122.3471, "base_foot_traffic": 3700, "permit_difficulty": 2},
+    {"id": "pioneer_square",  "name": "Pioneer Square",          "lat": 47.6015, "lng": -122.3343, "base_foot_traffic": 3200, "permit_difficulty": 2},
+    {"id": "sodo",            "name": "SoDo (Stadium District)", "lat": 47.5912, "lng": -122.3326, "base_foot_traffic": 1600, "permit_difficulty": 3},
+    {"id": "u_district",      "name": "University District",     "lat": 47.6587, "lng": -122.3138, "base_foot_traffic": 4400, "permit_difficulty": 1},
+    {"id": "ballard",         "name": "Ballard",                 "lat": 47.6685, "lng": -122.3845, "base_foot_traffic": 3000, "permit_difficulty": 1},
+    {"id": "fremont",         "name": "Fremont",                 "lat": 47.6510, "lng": -122.3501, "base_foot_traffic": 2700, "permit_difficulty": 1},
+    {"id": "queen_anne",      "name": "Queen Anne",              "lat": 47.6379, "lng": -122.3565, "base_foot_traffic": 2300, "permit_difficulty": 1},
+    {"id": "wallingford",     "name": "Wallingford",             "lat": 47.6615, "lng": -122.3343, "base_foot_traffic": 2000, "permit_difficulty": 1},
+    {"id": "columbia_city",   "name": "Columbia City",           "lat": 47.5599, "lng": -122.2925, "base_foot_traffic": 1500, "permit_difficulty": 1},
+    {"id": "west_seattle",    "name": "West Seattle Junction",   "lat": 47.5612, "lng": -122.3859, "base_foot_traffic": 1900, "permit_difficulty": 1}
+  ],
+  "major_venues": [
+    {"name": "Climate Pledge Arena", "zone": "seattle_center", "capacity": 17100, "type": "arena"},
+    {"name": "Lumen Field",          "zone": "sodo",           "capacity": 68740, "type": "stadium"},
+    {"name": "T-Mobile Park",        "zone": "sodo",           "capacity": 47929, "type": "stadium"},
+    {"name": "WaMu Theater",         "zone": "sodo",           "capacity": 7000,  "type": "theater"},
+    {"name": "Paramount Theatre",    "zone": "downtown",       "capacity": 2807,  "type": "theater"},
+    {"name": "Showbox SoDo",         "zone": "sodo",           "capacity": 1850,  "type": "music_venue"},
+    {"name": "The Showbox",          "zone": "downtown",       "capacity": 1100,  "type": "music_venue"},
+    {"name": "Seattle Convention Center", "zone": "downtown",  "capacity": 12000, "type": "convention"},
+    {"name": "Husky Stadium",        "zone": "u_district",     "capacity": 70000, "type": "stadium"},
+    {"name": "Hec Edmundson Pavilion","zone": "u_district",    "capacity": 10000, "type": "arena"},
+    {"name": "Neumos",               "zone": "capitol_hill",   "capacity": 650,   "type": "music_venue"},
+    {"name": "The Crocodile",        "zone": "belltown",       "capacity": 750,   "type": "music_venue"},
+    {"name": "Pike Place Market",    "zone": "downtown",       "capacity": 0,     "type": "tourism"},
+    {"name": "Space Needle",         "zone": "seattle_center", "capacity": 0,     "type": "tourism"}
+  ]
+}
