@@ -56,18 +56,27 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
 
     // Heat layer -- smaller radius so adjacent zones don't blob together,
     // and explicit maxIntensity so the brightest zone is the actual data max.
-    const heatData = HEATPOINTS.map(p => ({
-      location: new google.maps.LatLng(p.lat, p.lng),
-      weight: p.weight,
-    }));
-    const heatmap = new google.maps.visualization.HeatmapLayer({
-      data: heatData,
-      radius: 28,
-      blur: 18,
-      opacity: 0.55,
-      maxIntensity: MAX_FT / 1000.0,
-    });
-    heatmap.setMap(map);
+    // Wrapped in a guard: the visualization HeatmapLayer is deprecated and can
+    // fail to load on some keys/sessions. If it throws, we skip the heat layer
+    // but still draw the zone dots and cart pins below.
+    try {
+      if (google.maps.visualization && google.maps.visualization.HeatmapLayer) {
+        const heatData = HEATPOINTS.map(p => ({
+          location: new google.maps.LatLng(p.lat, p.lng),
+          weight: p.weight,
+        }));
+        const heatmap = new google.maps.visualization.HeatmapLayer({
+          data: heatData,
+          radius: 28,
+          blur: 18,
+          opacity: 0.55,
+          maxIntensity: MAX_FT / 1000.0,
+        });
+        heatmap.setMap(map);
+      }
+    } catch (e) {
+      console.warn('Heat layer skipped:', e);
+    }
 
     // Zone-centroid markers with the actual predicted foot-traffic value on hover.
     // This makes the per-zone numbers readable, regardless of how the heat
