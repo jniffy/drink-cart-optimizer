@@ -54,25 +54,27 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
       ],
     });
 
-    // Heat layer -- smaller radius so adjacent zones don't blob together,
-    // and explicit maxIntensity so the brightest zone is the actual data max.
-    // Wrapped in a guard: the visualization HeatmapLayer is deprecated and can
-    // fail to load on some keys/sessions. If it throws, we skip the heat layer
-    // but still draw the zone dots and cart pins below.
+    // Heat layer via deck.gl's GoogleMapsOverlay -- the supported replacement
+    // for the now-deprecated google.maps.visualization.HeatmapLayer. Wrapped in
+    // a guard so that if deck.gl fails to load for any reason, we skip the heat
+    // layer but still draw the zone dots and cart pins below.
     try {
-      if (google.maps.visualization && google.maps.visualization.HeatmapLayer) {
-        const heatData = HEATPOINTS.map(p => ({
-          location: new google.maps.LatLng(p.lat, p.lng),
-          weight: p.weight,
-        }));
-        const heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatData,
-          radius: 28,
-          blur: 18,
-          opacity: 0.55,
-          maxIntensity: MAX_FT / 1000.0,
+      if (window.deck && deck.GoogleMapsOverlay && deck.HeatmapLayer) {
+        const overlay = new deck.GoogleMapsOverlay({
+          layers: [
+            new deck.HeatmapLayer({
+              id: 'foot-traffic-heat',
+              data: HEATPOINTS,
+              getPosition: d => [d.lng, d.lat],
+              getWeight: d => d.weight,
+              radiusPixels: 55,
+              intensity: 1,
+              threshold: 0.05,
+              opacity: 0.55,
+            })
+          ]
         });
-        heatmap.setMap(map);
+        overlay.setMap(map);
       }
     } catch (e) {
       console.warn('Heat layer skipped:', e);
@@ -141,8 +143,11 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   }
   window.initMap = initMap;
 </script>
+<!-- deck.gl provides GoogleMapsOverlay + HeatmapLayer. Loaded first (no async)
+     so the `deck` global exists by the time the Maps callback fires initMap. -->
+<script src="https://unpkg.com/deck.gl@9.0.0/dist.min.js"></script>
 <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=__API_KEY__&libraries=visualization&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=__API_KEY__&callback=initMap">
 </script>
 </body>
 </html>
